@@ -1,4 +1,3 @@
-
 ## 📊 Testing Strategy
 
 ### Test Pyramid Implementation

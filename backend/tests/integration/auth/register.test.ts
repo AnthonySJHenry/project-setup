@@ -23,13 +23,10 @@ describe('POST /api/auth/register', () => {
     const userData = {
       email: 'test@example.com',
       password: 'SecurePassword123!',
-      name: 'Test User'
+      name: 'Test User',
     };
 
-    const response = await request(app)
-      .post('/api/auth/register')
-      .send(userData)
-      .expect(201);
+    const response = await request(app).post('/api/auth/register').send(userData).expect(201);
 
     expect(response.body).toHaveProperty('id');
     expect(response.body.email).toBe(userData.email);
@@ -38,7 +35,7 @@ describe('POST /api/auth/register', () => {
 
     // Verify user in database
     const dbUser = await prisma.user.findUnique({
-      where: { email: userData.email }
+      where: { email: userData.email },
     });
     expect(dbUser).toBeDefined();
     expect(dbUser?.password).not.toBe(userData.password);
@@ -48,13 +45,10 @@ describe('POST /api/auth/register', () => {
     const userData = {
       email: 'invalid-email',
       password: 'SecurePassword123!',
-      name: 'Test User'
+      name: 'Test User',
     };
 
-    const response = await request(app)
-      .post('/api/auth/register')
-      .send(userData)
-      .expect(400);
+    const response = await request(app).post('/api/auth/register').send(userData).expect(400);
 
     expect(response.body).toHaveProperty('error');
     expect(response.body.error).toContain('email');
@@ -64,20 +58,14 @@ describe('POST /api/auth/register', () => {
     const userData = {
       email: 'duplicate@example.com',
       password: 'SecurePassword123!',
-      name: 'Test User'
+      name: 'Test User',
     };
 
     // First registration
-    await request(app)
-      .post('/api/auth/register')
-      .send(userData)
-      .expect(201);
+    await request(app).post('/api/auth/register').send(userData).expect(201);
 
     // Duplicate registration
-    const response = await request(app)
-      .post('/api/auth/register')
-      .send(userData)
-      .expect(409);
+    const response = await request(app).post('/api/auth/register').send(userData).expect(409);
 
     expect(response.body).toHaveProperty('error');
     expect(response.body.error).toContain('already exists');

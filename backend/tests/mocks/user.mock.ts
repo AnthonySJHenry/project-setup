@@ -6,12 +6,12 @@ export const createMockUser = (overrides = {}) => ({
   name: faker.person.fullName(),
   createdAt: faker.date.past(),
   updatedAt: faker.date.recent(),
-  ...overrides
+  ...overrides,
 });
 
 export const createMockUserInput = (overrides = {}) => ({
   email: faker.internet.email().toLowerCase(),
   password: 'SecurePassword123!',
   name: faker.person.fullName(),
-  ...overrides
+  ...overrides,
 });

@@ -28,5 +28,5 @@ global.console = {
 // Clean up after all tests
 afterAll(async () => {
   // Close any open handles
-  await new Promise(resolve => setTimeout(() => resolve(true), 500));
+  await new Promise((resolve) => setTimeout(() => resolve(true), 500));
 });
