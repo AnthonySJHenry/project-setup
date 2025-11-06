@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.next/
+coverage/
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.csr
+*.db
+*.sqlite
