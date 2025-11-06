@@ -64,11 +64,11 @@ Initialize Git repository and create monorepo folder structure.
 ## Time: 30 minutes
 
 ## Acceptance Criteria
-- [ ] GitHub repo created
-- [ ] Local folder structure matches spec
-- [ ] README.md exists
-- [ ] .gitignore configured
-- [ ] Initial commit pushed
+- [x] GitHub repo created
+- [x] Local folder structure matches spec
+- [x] README.md exists
+- [x] .gitignore configured
+- [x] Initial commit pushed
 
 
 ```
@@ -89,11 +89,11 @@ Set up Node.js backend with TypeScript, Express, and development tooling.
 - Depends on: T1
 
 ## Acceptance Criteria
-- [ ] package.json with correct scripts
-- [ ] TypeScript configured
-- [ ] npm run dev starts server
-- [ ] Code changes auto-restart
-- [ ] npm run type-check passes
+- [x] package.json with correct scripts
+- [x] TypeScript configured
+- [x] npm run dev starts server
+- [x] Code changes auto-restart
+- [x] npm run type-check passes
 
 
 ```
@@ -114,8 +114,8 @@ Install and configure Jest for unit and integration testing.
 - Depends on: T2
 
 ## Acceptance Criteria
-- [ ] Jest configured for TypeScript
-- [ ] npm test runs successfully
+- [x] Jest configured for TypeScript
+- [x] npm test runs successfully
 - [ ] Sample test passes
 - [ ] Supertest works with Express
 - [ ] Coverage reporting works
