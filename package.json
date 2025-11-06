@@ -16,7 +16,7 @@
     "test:integration": "TEST_TYPE=integration jest --testPathPattern=integration --runInBand",
     "test:e2e": "jest --testPathPattern=e2e --runInBand",
     "test:clear": "jest --clearCache",
-    "test:ci": "jest --coverage --ci --reporters=default --reporters=jest-junit --maxWorkers=2",
+    "test:ci": "jest --coverage --ci --maxWorkers=2",
     "dev": "tsx watch src/server.ts",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
