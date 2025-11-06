@@ -14,7 +14,14 @@
     "test:unit": "jest --testPathPattern=unit",
     "test:integration": "jest --testPathPattern=integration --runInBand",
     "dev": "nodemon --exec tsx src/index.ts",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test:verbose": "jest --verbose --detectOpenHandles",
+    "test:e2e": "jest --testPathPattern=e2e --runInBand",
+    "test:clear": "jest --clearCache",
+    "test:ci": "jest --coverage --ci --reporters=default --reporters=jest-junit --maxWorkers=2",
+    "type-check:watch": "tsc --noEmit --watch",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "Anthony S.J. Henry",
