@@ -1,4 +1,5 @@
-import { hashPassword, comparePassword } from '@/utils/crypto';
+import { describe, it, expect } from '@jest/globals';
+import { hashPassword, comparePassword } from '@/utils/crypto.js';
 
 describe('Crypto Utils', () => {
   describe('hashPassword', () => {

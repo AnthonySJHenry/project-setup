@@ -1,15 +1,30 @@
 export default {
-  preset: 'ts-jest',
+  preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'node',
+  extensionsToTreatAsEsm: ['.ts'],
   roots: ['<rootDir>/src', '<rootDir>/tests'],
   testMatch: ['**/__tests__/**/*.test.ts', '**/tests/**/*.test.ts', '**/*.spec.ts'],
   transform: {
-    '^.+\\.ts$': [
+    '^.+\\.tsx?$': [
       'ts-jest',
       {
-        tsconfig: 'tsconfig.test.json',
+        useESM: true,
+        tsconfig: {
+          module: 'ESNext',
+          moduleResolution: 'bundler',
+          allowImportingTsExtensions: true,
+        },
       },
     ],
+  },
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@auth/(.*)$': '<rootDir>/src/auth/$1',
+    '^@jobs/(.*)$': '<rootDir>/src/jobs/$1',
+    '^@middleware/(.*)$': '<rootDir>/src/middleware/$1',
+    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@shared/(.*)$': '<rootDir>/../shared/$1',
   },
   collectCoverageFrom: [
     'src/**/*.ts',
@@ -46,12 +61,4 @@ export default {
   verbose: true,
   testTimeout: 10000,
   maxWorkers: '50%',
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@auth/(.*)$': '<rootDir>/src/auth/$1',
-    '^@jobs/(.*)$': '<rootDir>/src/jobs/$1',
-    '^@middleware/(.*)$': '<rootDir>/src/middleware/$1',
-    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@shared/(.*)$': '<rootDir>/../shared/$1',
-  },
 };

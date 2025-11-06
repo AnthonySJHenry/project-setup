@@ -1,7 +1,8 @@
+import { describe, it, expect, beforeAll, beforeEach, afterAll } from '@jest/globals';
 import request from 'supertest';
-import { Express } from 'express';
-import { createApp } from '@/app';
-import { prisma } from '@/utils/db';
+import type { Express } from 'express';
+import { createApp } from '@/app.js';
+import { prisma } from '@/utils/db.js';
 
 describe('POST /api/auth/register', () => {
   let app: Express;
