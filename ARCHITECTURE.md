@@ -1,9 +1,9 @@
 # ARCHITECTURE
 
 ```lua
-job-app-tracker-test/                    ← ROOT (workspace coordination only)
+job-app-tracker-test/                    ← ROOT
 │
-├── package.json                         ← Root workspace config (NOT app code)
+├── package.json                         ← Root workspace config (NO app code)
 ├── docker-compose.yml                   ← PostgreSQL container
 ├── playwright.config.ts                 ← E2E test config
 ├── .gitignore
@@ -18,7 +18,7 @@ job-app-tracker-test/                    ← ROOT (workspace coordination only)
 │   ├── .env.test                        ← Test environment variables
 │   │
 │   ├── src/                             ← BACKEND SOURCE CODE
-│   │   ├── app.ts                       ← ✅ EXPRESS APP HERE (backend)
+│   │   ├── app.ts                       ← EXPRESS APP (backend)
 │   │   ├── index.ts                     ← Server entry point (imports app.ts)
 │   │   ├── auth/
 │   │   │   ├── controller.ts            ← Auth route handlers
@@ -41,7 +41,7 @@ job-app-tracker-test/                    ← ROOT (workspace coordination only)
 │   │       └── express.d.ts             ← Express type extensions
 │   │
 │   ├── tests/                           ← BACKEND TESTS
-│   │   ├── setup.ts                     ← Test setup (Vitest)
+│   │   ├── setup.ts                     ← Test setup w/ Vitest
 │   │   ├── unit/                        ← 60% of tests
 │   │   │   ├── auth/
 │   │   │   │   └── service.test.ts
@@ -59,7 +59,7 @@ job-app-tracker-test/                    ← ROOT (workspace coordination only)
 │       ├── schema.prisma                ← Database schema
 │       └── migrations/                  ← Database migrations
 │
-├── frontend/                            ← NEXT.JS APP (React)
+├── frontend/                            ← NEXT.JS APP
 │   ├── package.json                     ← Frontend dependencies
 │   ├── tsconfig.json                    ← Frontend TypeScript config
 │   ├── next.config.ts                   ← Next.js config
@@ -68,7 +68,7 @@ job-app-tracker-test/                    ← ROOT (workspace coordination only)
 │   ├── .env.local                       ← Frontend environment variables
 │   │
 │   ├── src/
-│   │   ├── app/                         ← ✅ NEXT.JS APP ROUTER (NOT app.ts!)
+│   │   ├── app/                         ← NEXT.JS APP ROUTER
 │   │   │   ├── layout.tsx               ← Root layout
 │   │   │   ├── page.tsx                 ← Home page
 │   │   │   ├── globals.css              ← Global styles
