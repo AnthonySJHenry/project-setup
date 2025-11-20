@@ -1,3 +1,7 @@
+## Purpose
+> just mocking sprint refinement
+> however, some tasks have been completed
+
 ## STACK
 
 ```lua
