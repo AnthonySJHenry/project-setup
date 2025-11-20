@@ -2,7 +2,7 @@
 > just mocking sprint refinement <br>
 > however, some tasks have been completed
 
-## STACK
+## Project Tech Requirements
 
 ```lua
 Frontend: Next.js 14 (App Router), TypeScript 5.x, Tailwind CSS 3.x, shadcn/ui, React Hook Form + Zod, TanStack Query v5, Axios, Jest + RTL, Playwright
