@@ -2,6 +2,10 @@
 > just mocking sprint refinement <br>
 > however, some tasks have been completed
 
+<br>
+<br>
+<br>
+
 ## Client/Project Tech Requirements
 
 ```lua
@@ -19,9 +23,7 @@ Next.js Frontend → Express API (main) → PostgreSQL
                  FastAPI Python Microservices (scraping, parsing, other ML services)
 ```
 
-<br>
-<br>
-<br>
+
 <br>
 <br>
 
