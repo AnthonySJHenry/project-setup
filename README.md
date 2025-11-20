@@ -1,5 +1,5 @@
 ## Purpose
-> just mocking sprint refinement \n
+> just mocking sprint refinement <br>
 > however, some tasks have been completed
 
 ## STACK
